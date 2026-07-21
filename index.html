@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Str8-G8 Software and Web Development</title>
+    <style>
+        :root {
+            --gold: #f39c12;
+            --glass-bg: rgba(10, 25, 47, 0.7);
+            --text: #ffffff;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Garamond', serif; /* Classic medieval feel */
+            color: var(--text);
+            background-color: #000;
+        }
+
+        /* Fixed Background */
+        .bg-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(5,0,0,0.4), rgba(8,0,0,0.4)), url('meadow-str8g8.png');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        /* Container & Glassmorphism Cards */
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin: 60px 0 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(243, 156, 18, 0.3);
+            transition: transform 0.3s ease, border 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border: 1px solid var(--gold);
+        }
+
+        .card h3 {
+            color: var(--gold);
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+            margin: 15px 0;
+        }
+
+        ul {
+            list-style-type: "⚔ ";
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            padding: 50px;
+            border-radius: 15px;
+            max-width: 700px;
+            margin: 60px auto;
+            border: 1px solid var(--gold);
+        }
+
+        .contact-form input, .contact-form textarea, .contact-form select {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(243, 156, 18, 0.5);
+            color: white;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            background: var(--gold);
+            color: #000;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #e67e22;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: rgba(0,0,0,0.8);
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-fixed"></div>
+
+    <section class="hero">
+        <h1>Str8-G8 Software and Web Development</h1>
+        <p>Defending your digital borders with custom solutions.</p>
+    </section>
+
+    <div class="content-container">
+        
+        <h2 class="section-title">Website Tiers</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Starter Site</h3>
+                <span class="price">\$500 - \$1,500</span>
+                <p>A simple, solid foundation for your online presence.</p>
+            </div>
+            <div class="card">
+                <h3>Custom Build</h3>
+                <span class="price">\$1,500 - \$3,000</span>
+                <p>Detailed design with multiple pages and advanced contact forms.</p>
+            </div>
+            <div class="card">
+                <h3>The Citadel</h3>
+                <span class="price">Custom Quote</span>
+                <p>Full suite: Branding, Copywriting, SEO setup, and E-commerce.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Maintenance Guards</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Basic Watch</h3>
+                <span class="price">\$50 - \$100 /mo</span>
+                <ul>
+                    <li>Secure Hosting</li>
+                    <li>Automatic Backups</li>
+                    <li>Security Checks</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Watchman Plus</h3>
+                <span class="price">\$100 - \$200 /mo</span>
+                <ul>
+                    <li>Everything in Basic</li>
+                    <li>Content Edits</li>
+                    <li>Plugin Updates</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Imperial Guard</h3>
+                <span class="price">\$200 - \$400 /mo</span>
+                <ul>
+                    <li>Priority Support</li>
+                    <li>New Photos & Promos</li>
+                    <li>Regular Page Edits</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2 style="color:var(--gold); text-align:center;">Send a Raven</h2>
+            <form>
+                <input type="text" placeholder="Douglas J Lauritzen" required>
+                <input type="email" placeholder="truepath.doug@gmail.contact-form" required>
+                <select>
+                    <option>Starter Site Quest</option>
+                    <option>Custom Build Quest</option>
+                    <option>Enterprise Quest</option>
+                </select>
+                <textarea rows="5" placeholder="that people and organizations will recieve the valueable quality websites and application is my vision"></textarea>
+                <button type="submit" class="btn">Begin the Journey</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Str8-G8 Software and Web Development. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
